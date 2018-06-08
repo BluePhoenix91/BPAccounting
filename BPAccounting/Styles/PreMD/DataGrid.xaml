@@ -1,0 +1,110 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:BPAccounting">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../Styles/Colours.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style TargetType="DataGridRow" x:Key="MaterialRowStyle">
+        <Setter Property="MinHeight" Value="48"/>
+        <Setter Property="BorderBrush" Value="Silver"/>
+        <Setter Property="BorderThickness" Value="0 0 0 1"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <!--<Style.Triggers>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter Property="Background" Value="{StaticResource MaterialSecondaryColorBrush}"/>
+            </Trigger>
+        </Style.Triggers>-->
+    </Style>
+
+    <Style TargetType="DataGridColumnHeader" x:Key="MaterialColumnHeaderStyle">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="#000000"/>
+        <Setter Property="Opacity" Value="0.54"/>
+        <Setter Property="Padding" Value="24 0"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="BorderBrush" Value="Silver"/>
+        <Setter Property="BorderThickness" Value="0 0 0 1"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="MinHeight" Value="56"/>
+    </Style>
+
+    <Style TargetType="{x:Type DataGridCell}" x:Key="MaterialCellStyle">
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Foreground" Value="{StaticResource NormalTextBrush}"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Padding" Value="24 10"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type DataGridCell}">
+                    <Grid Background="{TemplateBinding Background}">
+                        <Border>
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Left" Margin="24 10"/>
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter Property="Background" Value="{StaticResource MaterialSecondaryColorBrush}"/>
+                <Setter Property="Foreground" Value="{StaticResource NormalTextBrush}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style TargetType="DataGridRow" x:Key="MaterialDenseRowStyle">
+        <Setter Property="MinHeight" Value="20"/>
+        <Setter Property="BorderBrush" Value="Silver"/>
+        <Setter Property="BorderThickness" Value="0 0 0 1"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Style.Triggers>
+            <Trigger Property="AlternationIndex" Value="0">
+                <Setter Property="Background" Value="Transparent"/>
+            </Trigger>
+            <Trigger Property="AlternationIndex" Value="1">
+                <Setter Property="Background" Value="#1affd740"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style TargetType="DataGridColumnHeader" x:Key="MaterialDenseColumnHeaderStyle">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="#000000"/>
+        <Setter Property="Opacity" Value="0.54"/>
+        <Setter Property="Padding" Value="24 0"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="BorderBrush" Value="Silver"/>
+        <Setter Property="BorderThickness" Value="0 0 0 1"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="MinHeight" Value="36"/>
+    </Style>
+
+    <Style TargetType="{x:Type DataGridCell}" x:Key="MaterialDenseCellStyle">
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Foreground" Value="{StaticResource NormalTextBrush}"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Padding" Value="24 5"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type DataGridCell}">
+                    <Grid Background="{TemplateBinding Background}">
+                        <Border>
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Left" Margin="24 5"/>
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter Property="Background" Value="{StaticResource MaterialSecondaryColorBrush}"/>
+                <Setter Property="Foreground" Value="{StaticResource NormalTextBrush}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+</ResourceDictionary>

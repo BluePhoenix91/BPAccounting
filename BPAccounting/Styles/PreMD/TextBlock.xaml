@@ -1,0 +1,46 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:BPAccounting">
+
+    <Style x:Key="Title" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource BaseTextBlockStyle}">
+        <Setter Property="FontSize" Value="{StaticResource FontSizeTitle}"/>
+        <Setter Property="FontFamily" Value="{StaticResource LatoMedium}"/>
+        <Setter Property="Foreground" Value="#ddffffff"/>
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="Margin" Value="24 0 0 20"/>
+    </Style>
+
+    <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource BaseTextBlockStyle}">
+        <Setter Property="FontSize" Value="{StaticResource FontSizeBody}"/>
+        <Setter Property="FontFamily" Value="{StaticResource LatoRegular}"/>
+        <Setter Property="Foreground" Value="#dd000000"/>
+    </Style>
+
+    <Style x:Key="SubHeading" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource BaseTextBlockStyle}">
+        <Setter Property="FontSize" Value="{StaticResource FontSizeSubHeading}"/>
+        <Setter Property="FontFamily" Value="{StaticResource LatoRegular}"/>
+        <Setter Property="Foreground" Value="{StaticResource MaterialPrimaryColorBrush}"/>
+        <Setter Property="Height" Value="48"/>
+        <Setter Property="Margin" Value="24 0 0 0"/>
+        <Setter Property="Padding" Value="0 16 0 0"/>
+    </Style>
+
+    <Style x:Key="LabelText" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource BaseTextBlockStyle}">
+        <Setter Property="FontSize" Value="{StaticResource FontSizeLabel}"/>
+        <Setter Property="Foreground" Value="#89000000"/>
+        <Setter Property="Margin" Value="0 24 16 0"/>
+    </Style>
+
+    <Style x:Key="LabelOutputText" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource BaseTextBlockStyle}">
+        <Setter Property="FontSize" Value="{StaticResource FontSizeBody}"/>
+        <Setter Property="Foreground" Value="{StaticResource NormalTextBrush}"/>
+        <Setter Property="Margin" Value="0 24 16 8"/>
+    </Style>
+
+    <Style x:Key="HelperText" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource BaseTextBlockStyle}">
+        <Setter Property="FontSize" Value="{StaticResource FontSizeLabel}"/>
+        <Setter Property="Foreground" Value="#89000000"/>
+        <Setter Property="Margin" Value="24 0 0 16"/>
+    </Style>
+
+</ResourceDictionary>

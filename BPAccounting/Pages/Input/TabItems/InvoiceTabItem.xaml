@@ -1,0 +1,115 @@
+﻿<StackPanel
+    x:Class="BPAccounting.InvoiceTabItem"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:local="clr-namespace:BPAccounting"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    mc:Ignorable="d" 
+    d:DesignHeight="800" d:DesignWidth="800"
+    Margin="24"
+    >
+
+    <DatePicker
+        SelectedDate="{Binding InvoiceDate}"
+        Name="LocaleDatePickerRTL"
+        materialDesign:HintAssist.Hint="Invoice date"
+        Margin="0 0 0  24"
+        />
+
+    <TextBox
+        Text="{Binding PeriodQuarter}"
+        Style="{StaticResource MaterialDesignTextFieldBoxTextBox}"
+        AcceptsReturn="false"
+        TextWrapping="Wrap"
+        Width="100"
+        HorizontalAlignment="Left"
+        materialDesign:HintAssist.Hint="Kwartaal"
+        Margin="0 0 0 24"
+        />
+
+    <TextBox
+        Text="{Binding PeriodYear}"
+        Style="{StaticResource MaterialDesignTextFieldBoxTextBox}"
+        AcceptsReturn="True"
+        TextWrapping="Wrap"
+        Width="150"
+        HorizontalAlignment="Left"
+        materialDesign:HintAssist.Hint="Jaar"
+        Margin="0 0 0 24"
+        />
+
+    <TextBlock
+        Text="Sale or purchase"
+        Style="{StaticResource MaterialDesignBody1TextBlock}"
+        Margin="0 0 0 8"
+        />
+
+    <CheckBox
+        Content="Purhcase"
+        IsChecked="{Binding IsIncoming}"
+        Margin=" 0 0 0 24"
+        />
+
+    <ComboBox
+        ItemsSource="{Binding CustomersSuppliers}"
+        DisplayMemberPath="Name"
+        SelectedItem="{Binding SelectedCustomerSupplier}"
+        Margin="0 0 0 24"
+        />
+
+    <ComboBox
+        ItemsSource="{Binding InvoiceTypes}"
+        DisplayMemberPath="Name"
+        SelectedItem="{Binding TypeSelected}"
+        Margin="0 0 0 24"
+        />
+
+    <ComboBox
+        ItemsSource="{Binding Divisions}"
+        DisplayMemberPath="Name"
+        SelectedItem="{Binding DivisionSelected}"
+        Margin="0 0 0 24"
+        />
+
+    <ComboBox
+        ItemsSource="{Binding Deductibility}"
+        DisplayMemberPath="Name"
+        SelectedItem="{Binding DeductibilitySelected}"
+        Margin="0 0 0 24"
+        />
+
+    <TextBox
+        Text="{Binding AmGoods}"
+        Margin="0 0 0 24"
+        />
+
+    <TextBox
+        Text="{Binding AmVat}"
+        Margin="0 0 0 24"
+        />
+
+    <TextBlock
+        Text="{Binding AmTotal}"
+        Margin="0 0 0 24"
+        />
+
+    <StackPanel
+        Orientation="Horizontal"
+        FlowDirection="RightToLeft"
+        >
+        <Button
+            Command="{Binding CreateInvoiceCommand}"
+            Content="Create invoice"
+            Style="{StaticResource MaterialDesignRaisedButton}"
+        />
+        <Button
+            Command="{Binding ResetInvoiceCommand}"
+            Content="Reset"
+            Style="{StaticResource MaterialDesignFlatButton}"
+            />
+    </StackPanel>
+    
+</StackPanel>

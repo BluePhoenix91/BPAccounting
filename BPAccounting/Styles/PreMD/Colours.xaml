@@ -1,0 +1,33 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:BPAccounting">
+
+    <!--Colors-->
+
+    <Color x:Key="MaterialPrimaryColor">#ff00838f</Color>
+    <Color x:Key="MaterialPrimaryLightColor">#ff4fb3bf</Color>
+    <Color x:Key="MaterialPrimaryDarkColor">#ff005662</Color>
+    <Color x:Key="MaterialSecondaryColor">#ffffc400</Color>
+    <Color x:Key="MaterialSecondaryLightColor">#fffff64f</Color>
+    <Color x:Key="MaterialSecondaryDarkColor">#ffc79400</Color>
+
+    <!--Normal text => 87 % opacity Black -->
+    <Color x:Key="NormalText">#DF000000</Color>
+    
+    <!--Divider color-->
+    <Color x:Key="DividerColor">#1E000000</Color>
+
+    <!--Brushes-->
+
+    <SolidColorBrush x:Key="MaterialPrimaryColorBrush" Color="{StaticResource MaterialPrimaryColor}"/>
+    <SolidColorBrush x:Key="MaterialPrimaryLightColorBrush" Color="{StaticResource MaterialPrimaryLightColor}"/>
+    <SolidColorBrush x:Key="MaterialPrimaryDarkColorBrush" Color="{StaticResource MaterialPrimaryDarkColor}"/>
+
+    <SolidColorBrush x:Key="MaterialSecondaryColorBrush" Color="{StaticResource MaterialSecondaryColor}"/>
+    <SolidColorBrush x:Key="MaterialSecondaryLightColorBrush" Color="{StaticResource MaterialSecondaryLightColor}"/>
+    <SolidColorBrush x:Key="MaterialSecondaryDarkColorBrush" Color="{StaticResource MaterialSecondaryDarkColor}"/>
+
+    <SolidColorBrush x:Key="NormalTextBrush" Color="{StaticResource NormalText}"/>
+    <SolidColorBrush x:Key="DividerBrush" Color="{StaticResource DividerColor}"/>
+
+</ResourceDictionary>
