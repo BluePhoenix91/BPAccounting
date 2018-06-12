@@ -28,6 +28,7 @@
                 <ResourceDictionary Source="Styles/PreMD/TabControl.xaml"/>
                 <ResourceDictionary Source="Styles/PostMD/TextBlock.xaml"/>
                 <ResourceDictionary Source="Styles/PostMD/ListView.xaml"/>
+                <ResourceDictionary Source="Styles/PreMD/WindowButtons.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

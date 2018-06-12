@@ -149,6 +149,9 @@ namespace BPAccounting
         /// </summary>
         public ICommand MenuCommand { get; set; }
 
+        /// <summary>
+        /// The command to go to the home screen
+        /// </summary>
         public ICommand HomeCommand { get; set; }
 
         #endregion
