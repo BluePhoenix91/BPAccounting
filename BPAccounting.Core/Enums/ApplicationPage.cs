@@ -29,5 +29,10 @@
         /// A testing page
         /// </summary>
         InvoiceInput = 4,
+
+        /// <summary>
+        /// A page showing the results of the year
+        /// </summary>
+        YearResult = 5,
     }
 }

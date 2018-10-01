@@ -44,6 +44,14 @@ namespace BPAccounting.Core
             };
             var vatDraftCardViewModel = new CardViewModel(vatDarftCardModel, ApplicationPage.ViewVATDraft);
             Cards.Add(vatDraftCardViewModel);
+
+            var YearResultCardModel = new CardModel()
+            {
+                Title = "YearResults",
+                ImageString = "pack://application:,,,/BPAccounting;component/Images/stakeholders.png",
+            };
+            var YearResultViewModel = new CardViewModel(YearResultCardModel, ApplicationPage.YearResult);
+            Cards.Add(YearResultViewModel);
         }
 
         #endregion

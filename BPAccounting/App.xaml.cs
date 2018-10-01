@@ -49,6 +49,9 @@ namespace BPAccounting
 
             // Deductibility types
             Types.SetupDeductibility();
+
+            // Country types
+            Types.SetupCountries();
         }
     }
 }

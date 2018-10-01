@@ -1,49 +1,53 @@
-﻿<local:BasePage x:Class="BPAccounting.InputPage"
-                xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-                xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-                xmlns:local="clr-namespace:BPAccounting"
-                xmlns:core="clr-namespace:BPAccounting.Core;assembly=BPAccounting.Core"
-                mc:Ignorable="d" 
-                d:DesignHeight="800" d:DesignWidth="800"
+﻿<local:BasePage 
+    x:Class="BPAccounting.InputPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:local="clr-namespace:BPAccounting"
+    xmlns:core="clr-namespace:BPAccounting.Core;assembly=BPAccounting.Core"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    mc:Ignorable="d" 
+    d:DesignHeight="800" d:DesignWidth="800"
+    >
+
+    <materialDesign:Card
+        Width="524"
+        Height="800"
+        >
+        <TabControl
+            Style="{StaticResource MaterialTabControl}"
+            HorizontalAlignment="Center"
+            Width="500"
+            >
+            <TabItem
+                Header="Customer"
+                DataContext="{x:Static core:StakeholderInputViewModel.Instance}"
+                >
+            
+                <local:CustomerTabItem/>
+            
+            </TabItem>
+
+            <TabItem
+                Header="Supplier"
+                DataContext="{x:Static core:StakeholderInputViewModel.Instance}"
                 >
 
-    <TabControl
-        Style="{StaticResource MaterialTabControl}"
-        HorizontalAlignment="Center"
-        Width="auto"
-        MinHeight="600"
-        MinWidth="600"
-        Height="auto"
-        >
-        <TabItem
-            Header="Customer"
-            DataContext="{x:Static core:StakeholderInputViewModel.Instance}"
-            >
-            
-            <local:CustomerTabItem/>
-            
-        </TabItem>
+                <local:SupplierTabItem/>
 
-        <TabItem
-            Header="Supplier"
-            DataContext="{x:Static core:StakeholderInputViewModel.Instance}"
-            >
-
-            <local:SupplierTabItem/>
-
-        </TabItem>
+            </TabItem>
         
-        <TabItem
-            Header="Invoice"
-            DataContext="{x:Static core:InvoiceInputViewModel.Instance}"
-            >
+            <TabItem
+                Header="Invoice"
+                DataContext="{x:Static core:InvoiceInputViewModel.Instance}"
+                >
 
-            <local:InvoiceTabItem/>
+                <local:InvoiceTabItem/>
 
         </TabItem>
 
     </TabControl>
- 
+    </materialDesign:Card>
+
 </local:BasePage>

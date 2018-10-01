@@ -1,6 +1,4 @@
-﻿using BPAccounting.Core;
-
-namespace BPAccounting
+﻿namespace BPAccounting
 {
     /// <summary>
     /// Interaction logic for ViewStakeholdersPage.xaml

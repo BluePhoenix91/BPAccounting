@@ -1,4 +1,5 @@
 ﻿using BPAccounting.Data;
+using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
@@ -16,6 +17,11 @@ namespace BPAccounting.Core
         #endregion
 
         #region public properties
+
+        /// <summary>
+        /// List with country categories
+        /// </summary>
+        public ObservableCollection<CountryProperty> Countries { get; set; } = new ObservableCollection<CountryProperty>(Types.CountryTypes);
 
         public string Name { get; set; }
         
@@ -39,6 +45,11 @@ namespace BPAccounting.Core
         /// The bank account of the stakeholder
         /// </summary>
         public string BankAcc { get; set; }
+
+        /// <summary>
+        /// The location where the stakeholder is at
+        /// </summary>
+        public CountryProperty CountrySelected { get; set; }
 
         #endregion
 
@@ -91,9 +102,9 @@ namespace BPAccounting.Core
         {
             Name = "";
             IsSupplier = false;
-            PhNr = " ";
-            VatNr = " ";
-            BankAcc = " ";
+            PhNr = "";
+            VatNr = "";
+            BankAcc = "";
         }
 
         /// <summary>

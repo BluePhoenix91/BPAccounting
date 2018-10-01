@@ -26,6 +26,9 @@ namespace BPAccounting
                 case ApplicationPage.InvoiceInput:
                     return new InputPage();
 
+                case ApplicationPage.YearResult:
+                    return new YearResultPage();
+
                 default:
                     Debugger.Break();
                     return null;

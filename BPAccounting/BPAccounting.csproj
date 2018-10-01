@@ -232,6 +232,9 @@
     <Compile Include="Pages\Output\TabItems\TabItemInvoices.xaml.cs">
       <DependentUpon>TabItemInvoices.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Results\YearResultPage.xaml.cs">
+      <DependentUpon>YearResultPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\VAT\VATDraftPage.xaml.cs">
       <DependentUpon>VATDraftPage.xaml</DependentUpon>
     </Compile>
@@ -291,6 +294,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Output\TabItems\TabItemInvoices.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Results\YearResultPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

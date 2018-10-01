@@ -30,7 +30,7 @@ namespace BPAccounting
         /// <summary>
         /// The radius of the edges of the window
         /// </summary>
-        private int mWindowRadius = 10;
+        private int mWindowRadius = 4;
 
         /// <summary>
         /// The last known dock position
@@ -113,7 +113,7 @@ namespace BPAccounting
         /// <summary>
         /// The height of the title bar / caption of the window
         /// </summary>
-        public int TitleHeight { get; set; } = 42;
+        public int TitleHeight { get; set; } = 30;
         /// <summary>
         /// The height of the title bar / caption of the window
         /// </summary>

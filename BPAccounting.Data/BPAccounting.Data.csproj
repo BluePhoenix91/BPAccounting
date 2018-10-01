@@ -50,12 +50,15 @@
     <Compile Include="Invoice\Invoice.cs" />
     <Compile Include="Payments\Payment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Stakeholders\CountryProperty.cs" />
     <Compile Include="Stakeholders\Stakeholder.cs" />
     <Compile Include="Stakeholders\VAT\VatDraftModel.cs" />
     <Compile Include="Stakeholders\VAT\VatRegModel.cs" />
     <Compile Include="VAT\VATDraftModel.cs" />
     <Compile Include="VAT\VATRegModel.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="SQL\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

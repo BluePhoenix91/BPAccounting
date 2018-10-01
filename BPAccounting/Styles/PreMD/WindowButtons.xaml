@@ -54,7 +54,7 @@
 
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Background" Value="{DynamicResource PrimaryHueDarkBrush}" />
+                <Setter Property="Background" Value="{DynamicResource PrimaryHueLightBrush}" />
             </Trigger>
         </Style.Triggers>
 

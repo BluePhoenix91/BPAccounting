@@ -1,10 +1,12 @@
-﻿<local:BasePage x:Class="BPAccounting.ViewStakeholdersPage"
+﻿<local:BasePage 
+    x:Class="BPAccounting.ViewStakeholdersPage"
                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
                 xmlns:local="clr-namespace:BPAccounting"
                 xmlns:core="clr-namespace:BPAccounting.Core;assembly=BPAccounting.Core" 
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
                 mc:Ignorable="d" 
                 d:DesignHeight="450" d:DesignWidth="800"
                 DataContext="{x:Static core:ViewStakeholdersViewModel.Instance}"
@@ -12,32 +14,38 @@
                 >
 
 
-    <TabControl
+    <materialDesign:Card
+        Width="1100"
+        Height="auto"
+        HorizontalContentAlignment="Left"
+        >
+        <TabControl
         Style="{StaticResource MaterialTabControl}"
-        HorizontalAlignment="Center"
+        HorizontalAlignment="left"
         Width="auto"
         MinHeight="600"
         >
-        <TabItem
+            <TabItem
             Header="Customers"
             >
-            <local:TabItemCustomers
+                <local:TabItemCustomers
                 ItemsSource="{Binding Customers}"
                 />
-        </TabItem>
-        <TabItem
+            </TabItem>
+            <TabItem
             Header="Suppliers"
             >
-            <local:TabItemCustomers
+                <local:TabItemCustomers
                 ItemsSource="{Binding Suppliers}"
                 />
-        </TabItem>
-        <TabItem
+            </TabItem>
+            <TabItem
             Header="Invoices"
             >
-            <local:TabItemInvoices
+                <local:TabItemInvoices
                 ItemsSource="{Binding Invoices}"
                 />
-        </TabItem>
-    </TabControl>
+            </TabItem>
+        </TabControl>
+    </materialDesign:Card>
 </local:BasePage>

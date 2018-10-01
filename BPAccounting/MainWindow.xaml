@@ -5,6 +5,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:local="clr-namespace:BPAccounting"
+    xmlns:core="clr-namespace:BPAccounting.Core;assembly=BPAccounting.Data"
     mc:Ignorable="d"
     WindowStartupLocation="CenterScreen"
     WindowState="Maximized"
@@ -138,39 +139,39 @@
             />
     </WindowChrome.WindowChrome>
 
-    <StackPanel>
-        <materialDesign:ColorZone
-            Padding="16"
-            materialDesign:ShadowAssist.ShadowDepth="Depth2"
-            Mode="PrimaryMid"
-            >
-            <DockPanel>
-                <ToggleButton
-                    Style="{StaticResource MaterialDesignHamburgerToggleButton}"
-                    IsChecked="False"
-                    x:Name="MenuToggleButton"
-                    DockPanel.Dock="Left"
-                />
-                <TextBlock 
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    FontSize="22"
-                    Text="Page title"
-                />
-            </DockPanel>
-        </materialDesign:ColorZone>
-        <Button
-            Content="Home"
-            Margin="24"
-            Command="{Binding HomeCommand}"
+    <materialDesign:DrawerHost>
+        <StackPanel>
+            <materialDesign:ColorZone
+                Padding="16"
+                materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                Mode="PrimaryMid"
+                >
+                <DockPanel>
+                    <Button
+                        Style="{StaticResource MaterialDesignFlatButton}"
+                        DockPanel.Dock="Left"
+                        Command="{Binding HomeCommand}"
+                        >
+                        <materialDesign:PackIcon Kind="Home" Foreground="White" />
+                    </Button>                       
+                    <TextBlock 
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontSize="22"
+                        Text="{Binding ApplicationViewModel.CurrentPage, 
+                          Source={x:Static local:ViewModelLocator.Instance}}"
+                        />
+                </DockPanel>
+            </materialDesign:ColorZone>
+            <Frame 
+                x:Name="MainFrame" 
+                Content="{Binding ApplicationViewModel.CurrentPage, 
+                          Source={x:Static local:ViewModelLocator.Instance},  
+                          Converter={local:ApplicationPageValueConverter}}"
+                NavigationUIVisibility="Hidden"
+                Padding="24"
             />
-        <Frame 
-            x:Name="MainFrame" 
-            Content="{Binding ApplicationViewModel.CurrentPage, 
-                      Source={x:Static local:ViewModelLocator.Instance},  
-                      Converter={local:ApplicationPageValueConverter}}"
-            NavigationUIVisibility="Hidden"
-            Padding="24"
-            />
-    </StackPanel>
+        </StackPanel>
+    </materialDesign:DrawerHost>
+   
 </Window>

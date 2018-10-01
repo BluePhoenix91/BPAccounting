@@ -20,7 +20,7 @@
         />
 
     <TextBox
-        materialDesign:HintAssist.Hint="Name"
+        materialDesign:HintAssist.Hint="Phone number"
         Style="{StaticResource MaterialDesignFloatingHintTextBox}"
         Margin="0 24 0 0"
         Text="{Binding PhNr}"
@@ -39,6 +39,15 @@
         Margin="0 24 0 0"
         Text="{Binding BankAcc}"
         />
+
+    <ComboBox
+        materialDesign:HintAssist.Hint="Country"
+        ItemsSource="{Binding Countries}"
+        DisplayMemberPath="Name"
+        SelectedItem="{Binding CountrySelected}"
+        Margin="0 24 0 0"
+        />
+
 
     <StackPanel
         Orientation="Horizontal"

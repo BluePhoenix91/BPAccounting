@@ -24,6 +24,11 @@ namespace BPAccounting.Core
         /// List of all deductibility types
         /// </summary>
         static public List<Deductibility> DeductibilityTypes { get; set; }
+
+        /// <summary>
+        /// List of all country types
+        /// </summary>
+        static public List<CountryProperty> CountryTypes { get; set; }
         
         /// <summary>
         /// Setup for the sales invoice types
@@ -81,6 +86,19 @@ namespace BPAccounting.Core
                 new Deductibility() { Name = "Restaurant costs", DedubctibilPercentage = 0.69m },
                 new Deductibility() { Name = "Relation gifts", DedubctibilPercentage = 0.5m },
                 new Deductibility() { Name = "Reception costs", DedubctibilPercentage = 0.5m },
+            };
+        }
+        
+        /// <summary>
+        /// Creates all country properties
+        /// </summary>
+        static public void SetupCountries()
+        {
+            CountryTypes = new List<CountryProperty>()
+            {
+                new CountryProperty() { Name = "National" },
+                new CountryProperty() { Name = "European" },
+                new CountryProperty() { Name = "International" },
             };
         }
     }

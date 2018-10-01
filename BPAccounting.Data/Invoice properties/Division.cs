@@ -5,12 +5,12 @@
         #region Public properties
 
         /// <summary>
-        /// The id for the invoice type
+        /// The id for the division type
         /// </summary>
         public int Id { get; set; }
 
         /// <summary>
-        /// The name of the invoice type
+        /// The name of the division type
         /// </summary>
         public string Name { get; set; }
 
